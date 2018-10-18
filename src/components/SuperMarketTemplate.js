@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SuperMarketTemplate = ({items, basket}) => {
+const SuperMarketTemplate = ({items, basket, total}) => {
     return (
         <SuperMarket>
             <ItemsWrapper>
@@ -11,6 +11,7 @@ const SuperMarketTemplate = ({items, basket}) => {
             <BasketWrapper>
                 <Title>장바구니</Title>
                 {basket}
+                {total}
             </BasketWrapper>
         </SuperMarket>
     );

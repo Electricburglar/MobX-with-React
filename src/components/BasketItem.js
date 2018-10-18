@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { observer } from 'mobx-react';
 
-const BasketItem = ({ name, price, count, onTake }) => {
+const BasketItem = ({ item, onTake }) => {
   return (
     <BasketItemTemplate>
-      <Name>{name}</Name>
-      <Price>{price}원</Price>
-      <Count>{count}</Count>
-      <Return onClick={() => onTake(name)}>갖다놓기</Return>
+      <Name>{item.name}</Name>
+      <Price>{item.price}원</Price>
+      <Count>{item.count}</Count>
+      <Return onClick={() => onTake(item.name)}>갖다놓기</Return>
     </BasketItemTemplate>
   );
 };
