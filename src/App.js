@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
-import Counter from './Counter';
+import SuperMarket from './components/SuperMarket';
+import DevTools from 'mobx-react-devtools';
 
 class App extends Component {
   render() {
     return (
-      <Counter />
+      <div>
+        <SuperMarket />
+        {process.env.NODE_ENV === 'development' && <DevTools />}
+      </div>
     );
   }
 }
